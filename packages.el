@@ -50,6 +50,7 @@
 ;(unpin! t)
 
 (package! catppuccin-theme)
+(package! all-the-icons-dired)
 (package! dired-open)
 (package! dired-subtree)
 (package! peep-dired)
