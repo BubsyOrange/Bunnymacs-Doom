@@ -46,7 +46,7 @@
 ;; Get file icons in dired
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 ;; With dired-open plugin, you can launch external programs for certain extensions
-;; For example, I set all .png files to open in 'sxiv' and all .mp4 files to open in 'mpv'
+;; For example, I set all .png files to open in 'xviewer' and all .mp4 files to open in 'celluloid'
 (setq dired-open-extensions '(("gif" . "xviewer")
                               ("jpg" . "xviewer")
                               ("png" . "xviewer")
@@ -98,8 +98,36 @@
       org-journal-date-format "%B %d, %Y (%A) "
       org-journal-file-format "%Y-%m-%d.org")
 
+(after! org
+  (setq org-roam-directory "~/Org/roam/"
+        org-roam-graph-viewer "/usr/bin/brave-browser"))
+
+(map! :leader
+      (:prefix ("n r" . "org-roam")
+       :desc "Completion at point" "c" #'completition-at-point
+       :desc "Find node"           "f" #'org-roam-node-find
+       :desc "Show graph"          "g" #'org-roam-graph
+       :desc "Insert node"         "i" #'org-roam-node-insert
+       :desc "Capture to node"     "n" #'org-roam-capture
+       :desc "Toggle roam buffer"  "r" #'org-roam-buffer-toggle))
+
+(setq shell-file-name "/bin/fish"
+      vterm-max-scrollback 5000)
+(setq eshell-rc-script "~/.config/doom/eshell/profile"
+      eshell-aliases-file "~/.config/doom/eshell/aliases"
+      eshell-history-size 5000
+      eshell-buffer-maximum-lines 5000
+      eshell-hist-ignoredups t
+      eshell-scroll-to-bottom-on-input t
+      eshell-destroy-buffer-when-process-dies t
+      eshell-visual-commands'("bash" "fish" "htop" "ssh" "top" "zsh"))
+(map! :leader
+      :desc "Eshell"                 "e s" #'eshell
+      :desc "Eshell popup toggle"    "e t" #'+eshell/toggle
+      :desc "Vterm popup toggle"     "t v" #'+vterm/toggle)
+
 (after! treemacs
   (setq treemacs-show-hidden-files)
   (setq treemacs-width 30))
 (map! :leader
-      :desc "Toggle treemacs" "t t" #'treemacs)
+      :desc "Toggle treemacs" "t t" #'treemacs-toggle)

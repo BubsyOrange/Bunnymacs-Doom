@@ -53,3 +53,4 @@
 (package! dired-open)
 (package! dired-subtree)
 (package! peep-dired)
+(package! org-roam)
