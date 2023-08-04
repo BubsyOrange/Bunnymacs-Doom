@@ -42,7 +42,7 @@ This is the Doom Emacs version of my Bunnymacs config. It's very much a work in 
 #+end_src
 
 * DIRED
-Dired is th file manager within Emacs.
+Dired is the file manager within Emacs.
 
 ** Keybindings To Open Dired
 
