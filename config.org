@@ -12,11 +12,11 @@
   - [[#keybindings-within-dired-with-peep-dired-mode-enabled][Keybindings Within Dired With Peep-Dired-Mode Enabled]]
 - [[#doom-theme][DOOM THEME]]
 - [[#fonts][FONTS]]
+- [[#neotree][NEOTREE]]
 - [[#org][ORG]]
   - [[#org-journal][Org-journal]]
   - [[#org-roam][Org-roam]]
 - [[#shells][SHELLS]]
-- [[#treemacs][TREEMACS]]
 
 * ABOUT
 This is the Doom Emacs version of my Bunnymacs config. It's very much a work in progress.
