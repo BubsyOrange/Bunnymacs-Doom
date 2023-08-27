@@ -73,6 +73,15 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
+(after! neotree
+  (setq neo-smart-open t
+        neo-window-fixed-size nil))
+(after! doom-themes
+  (setq doom-neotree-enable-variable-pitch t))
+(map! :leader
+      :desc "Toggle neotree file viewer" "t n" #'neotree-toggle
+      :desc "Open directory in neotree"  "d n" #'neotree-dir)
+
 (map! :leader
       :desc "Org babel tangle" "m B" #'org-babel-tangle)
 (after! org
@@ -125,9 +134,3 @@
       :desc "Eshell"                 "e s" #'eshell
       :desc "Eshell popup toggle"    "e t" #'+eshell/toggle
       :desc "Vterm popup toggle"     "t v" #'+vterm/toggle)
-
-(after! treemacs
-  (setq treemacs-show-hidden-files)
-  (setq treemacs-width 30))
-(map! :leader
-      :desc "Toggle treemacs" "t t" #'treemacs-toggle)
