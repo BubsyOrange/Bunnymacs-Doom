@@ -224,6 +224,15 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 #+end_src
 
 ** Org-roam
+| COMMAND                | DESCRIPTION                        | KEYBINDING |
+|------------------------+------------------------------------+------------|
+| completion-at-point    | /Completion of node-insert at point/ | SPC n r c  |
+| org-roam-node-find     | /Find node or create a new one/      | SPC n r f  |
+| org-roam-graph         | /Show graph of all nodes/            | SPC n r g  |
+| org-roam-node-insert   | /Insert link to a node/              | SPC n r i  |
+| org-roam-capture       | /Capture to node/                    | SPC n r n  |
+| org-roam-buffer-toggle | /Toggle roam buffer/                 | SPC n r r  |
+
 #+begin_src emacs-lisp
 (after! org
   (setq org-roam-directory "~/Org/roam/"
