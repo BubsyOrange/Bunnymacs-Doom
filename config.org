@@ -262,7 +262,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 
 * SHELLS
 #+begin_src emacs-lisp
-(setq shell-file-name "/bin/zsh"
+(setq shell-file-name "/usr/bin/fish"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"
