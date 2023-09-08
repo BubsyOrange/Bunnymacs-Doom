@@ -48,12 +48,12 @@
 ;; Get file icons in dired
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 ;; With dired-open plugin, you can launch external programs for certain extensions
-;; For example, I set all .png files to open in 'xviewer' and all .mp4 files to open in 'celluloid'
-(setq dired-open-extensions '(("gif" . "xviewer")
-                              ("jpg" . "xviewer")
-                              ("png" . "xviewer")
-                              ("mkv" . "celluloid")
-                              ("mp4" . "celluloid")))
+;; For example, I set all .png files to open in 'okular' and all .mp4 files to open in 'mpv'
+(setq dired-open-extensions '(("gif" . "okular")
+                              ("jpg" . "okular")
+                              ("png" . "okular")
+                              ("mkv" . "mpv")
+                              ("mp4" . "mpv")))
 
 (evil-define-key 'normal peep-dired-mode-map
   (kbd "j") 'peep-dired-next-file
