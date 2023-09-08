@@ -1,3 +1,5 @@
+(setq backup-directory-alist '((".*" . "~/.local/share/Trash/files")))
+
 (setq bookmark-default-file "~/.config/doom/bookmarks")
 
 (map! :leader
@@ -58,9 +60,11 @@
   (kbd "k") 'peep-dired-prev-file)
 (add-hook 'peep-dired-hook 'evil-normalize-keymaps)
 
+(setq fancy-splash-image "~/.config/doom/img/Smug_Reisen.png")
+
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'macchiato) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 15)

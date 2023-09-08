@@ -4,12 +4,14 @@
 
 * TABLE OF CONTENTS :TOC:
 - [[#about][ABOUT]]
+- [[#backups][BACKUPS]]
 - [[#bookmarks-and-buffers][BOOKMARKS AND BUFFERS]]
   - [[#bookmarks][Bookmarks]]
 - [[#dired][DIRED]]
   - [[#keybindings-to-open-dired][Keybindings To Open Dired]]
   - [[#keybindings-within-dired][Keybindings Within Dired]]
   - [[#keybindings-within-dired-with-peep-dired-mode-enabled][Keybindings Within Dired With Peep-Dired-Mode Enabled]]
+- [[#doom-dashboard][DOOM DASHBOARD]]
 - [[#doom-theme][DOOM THEME]]
 - [[#fonts][FONTS]]
 - [[#neotree][NEOTREE]]
@@ -20,6 +22,11 @@
 
 * ABOUT
 This is the Doom Emacs version of my Bunnymacs config. It's very much a work in progress.
+
+* BACKUPS
+#+begin_src emacs-lisp
+(setq backup-directory-alist '((".*" . "~/.local/share/Trash/files")))
+#+end_src
 
 * BOOKMARKS AND BUFFERS
 ** Bookmarks
@@ -154,11 +161,16 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 (add-hook 'peep-dired-hook 'evil-normalize-keymaps)
 #+END_SRC
 
+* DOOM DASHBOARD
+#+begin_src emacs-lisp
+(setq fancy-splash-image "~/.config/doom/img/Smug_Reisen.png")
+#+end_src
+
 * DOOM THEME
 #+begin_src emacs-lisp
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'macchiato) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 #+end_src
 
