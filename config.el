@@ -64,7 +64,7 @@
 
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'macchiato) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 15)
@@ -76,6 +76,9 @@
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
+
+(setq doom-modeline-height 30           ;; Sets modeline height
+      doom-modeline-bar-width 5)        ;; Sets right bar width
 
 (after! neotree
   (setq neo-smart-open t
