@@ -15,11 +15,11 @@
 - [[#doom-theme][DOOM THEME]]
 - [[#fonts][FONTS]]
 - [[#modeline][MODELINE]]
-- [[#neotree][NEOTREE]]
 - [[#org][ORG]]
   - [[#org-journal][Org-journal]]
   - [[#org-roam][Org-roam]]
 - [[#shells][SHELLS]]
+- [[#treemacs][TREEMACS]]
 
 * ABOUT
 This is the Doom Emacs version of my Bunnymacs config. It's very much a work in progress.
@@ -171,7 +171,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 #+begin_src emacs-lisp
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'macchiato) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 #+end_src
 
@@ -192,23 +192,6 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 #+begin_src emacs-lisp
 (setq doom-modeline-height 30           ;; Sets modeline height
       doom-modeline-bar-width 5)        ;; Sets right bar width
-#+end_src
-
-* NEOTREE
-| COMMAND        | DESCRIPTION               | KEYBINDING |
-|----------------+---------------------------+------------|
-| neotree-toggle | /Toggle neotree/            | SPC t n    |
-| neotree- dir   | /Open directory in neotree/ | SPC d n    |
-
-#+begin_src emacs-lisp
-(after! neotree
-  (setq neo-smart-open t
-        neo-window-fixed-size nil))
-(after! doom-themes
-  (setq doom-neotree-enable-variable-pitch t))
-(map! :leader
-      :desc "Toggle neotree file viewer" "t n" #'neotree-toggle
-      :desc "Open directory in neotree"  "d n" #'neotree-dir)
 #+end_src
 
 * ORG
@@ -283,4 +266,14 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
       :desc "Eshell"                 "e s" #'eshell
       :desc "Eshell popup toggle"    "e t" #'+eshell/toggle
       :desc "Vterm popup toggle"     "t v" #'+vterm/toggle)
+#+end_src
+
+* TREEMACS
+#+begin_src emacs-lisp
+(after! treemacs
+  (setq treemacs-width 30))
+
+(map! :leader
+      :desc "Toggle Treemacs"           "t t" #'treemacs
+      :desc "Select Treemacs Window"    "t 1" #'treemacs-select-window)
 #+end_src

@@ -64,7 +64,7 @@
 
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'macchiato) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 15)
@@ -79,15 +79,6 @@
 
 (setq doom-modeline-height 30           ;; Sets modeline height
       doom-modeline-bar-width 5)        ;; Sets right bar width
-
-(after! neotree
-  (setq neo-smart-open t
-        neo-window-fixed-size nil))
-(after! doom-themes
-  (setq doom-neotree-enable-variable-pitch t))
-(map! :leader
-      :desc "Toggle neotree file viewer" "t n" #'neotree-toggle
-      :desc "Open directory in neotree"  "d n" #'neotree-dir)
 
 (map! :leader
       :desc "Org babel tangle" "m B" #'org-babel-tangle)
@@ -141,3 +132,10 @@
       :desc "Eshell"                 "e s" #'eshell
       :desc "Eshell popup toggle"    "e t" #'+eshell/toggle
       :desc "Vterm popup toggle"     "t v" #'+vterm/toggle)
+
+(after! treemacs
+  (setq treemacs-width 30))
+
+(map! :leader
+      :desc "Toggle Treemacs"           "t t" #'treemacs
+      :desc "Select Treemacs Window"    "t 1" #'treemacs-select-window)
