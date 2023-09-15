@@ -118,7 +118,7 @@
        :desc "Capture to node"     "n" #'org-roam-capture
        :desc "Toggle roam buffer"  "r" #'org-roam-buffer-toggle))
 
-(setq shell-file-name "/usr/bin/fish"
+(setq shell-file-name "/usr/bin/zsh"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"
