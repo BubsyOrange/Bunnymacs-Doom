@@ -4,7 +4,6 @@
 
 * TABLE OF CONTENTS :TOC:
 - [[#about][ABOUT]]
-- [[#backups][BACKUPS]]
 - [[#bookmarks-and-buffers][BOOKMARKS AND BUFFERS]]
   - [[#bookmarks][Bookmarks]]
 - [[#dired][DIRED]]
@@ -23,11 +22,6 @@
 
 * ABOUT
 This is the Doom Emacs version of my Bunnymacs config. It's very much a work in progress.
-
-* BACKUPS
-#+begin_src emacs-lisp
-(setq backup-directory-alist '((".*" . "~/.local/share/Trash/files")))
-#+end_src
 
 * BOOKMARKS AND BUFFERS
 ** Bookmarks
