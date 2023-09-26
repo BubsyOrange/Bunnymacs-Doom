@@ -2,6 +2,8 @@
 #+AUTHOR: Bubsy Orange
 #+STARTUP: showeverything
 
+[[./img/bunnymacs-doom-screenshot.png]]
+
 * TABLE OF CONTENTS :TOC:
 - [[#about][ABOUT]]
 - [[#bookmarks-and-buffers][BOOKMARKS AND BUFFERS]]
