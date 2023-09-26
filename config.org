@@ -6,6 +6,7 @@
 - [[#about][ABOUT]]
 - [[#bookmarks-and-buffers][BOOKMARKS AND BUFFERS]]
   - [[#bookmarks][Bookmarks]]
+- [[#centaur-tabs][CENTAUR TABS]]
 - [[#dired][DIRED]]
   - [[#keybindings-to-open-dired][Keybindings To Open Dired]]
   - [[#keybindings-within-dired][Keybindings Within Dired]]
@@ -41,6 +42,35 @@ This is the Doom Emacs version of my Bunnymacs config. It's very much a work in 
        :desc "Set bookmark"                            "m" #'bookmark-set
        :desc "Delete bookmark"                         "M" #'bookmark-set
        :desc "Save current bookmarks to bookmark file" "w" #'bookmark-save))
+#+end_src
+
+* CENTAUR TABS
+Tabs for Emacs.
+
+| COMMAND                     | DESCRIPTION               | KEYBINDING       |
+|-----------------------------+---------------------------+------------------|
+| centaur-tabs-mode           | /Toggle tabs globally/      | SPC t c          |
+| centaur-tabs-local-mode     | /Toggle tabs local display/ | SPC t C          |
+| centaur-tabs-forward        | /Next tab/                  | g <right> or g t |
+| centaur-tabs-backward       | /Previous tab/              | g <left> or g T  |
+| centaur-tabs-forward-group  | /Next tab group/            | g <down>         |
+| centaur-tabs-backward-group | /Previous tab group/        | g <up>           |
+
+#+begin_src emacs-lisp
+(setq centaur-tabs-set-bar 'left
+      centaur-tabs-set-icons t
+      centaur-tabs-gray-out-icons 'buffer
+      centaur-tabs-height 24
+      centaur-tabs-set-modified-marker t
+      centaur-tabs-style "bar"
+      centaur-tabs-modified-marker "•")
+(map! :leader
+      :desc "Toggle tabs globally" "t c" #'centaur-tabs-mode
+      :desc "Toggle tabs local display" "t C" #'centaur-tabs-local-mode)
+(evil-define-key 'normal centaur-tabs-mode-map (kbd "g <right>") 'centaur-tabs-forward        ; default Doom binding is 'g t'
+                                               (kbd "g <left>")  'centaur-tabs-backward       ; default Doom binding is 'g T'
+                                               (kbd "g <down>")  'centaur-tabs-forward-group
+                                               (kbd "g <up>")    'centaur-tabs-backward-group)
 #+end_src
 
 * DIRED
