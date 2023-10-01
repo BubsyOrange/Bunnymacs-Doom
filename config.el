@@ -150,5 +150,5 @@
   (setq treemacs-width 30))
 
 (map! :leader
-      :desc "Toggle Treemacs"           "t t" #'treemacs
-      :desc "Select Treemacs Window"    "t 1" #'treemacs-select-window)
+      :desc "Toggle treemacs"           "t t" #'treemacs
+      :desc "Select treemacs window"    "t 1" #'treemacs-select-window)

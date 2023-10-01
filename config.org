@@ -295,11 +295,16 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 #+end_src
 
 * TREEMACS
+| COMMAND                | DESCRIPTION            | KEYBINDING |
+|------------------------+------------------------+------------|
+| treemacs               | Toggle treemacs        | SPC t t    |
+| treemacs-select-window | Select treemacs window | SPC t 1    |
+
 #+begin_src emacs-lisp
 (after! treemacs
   (setq treemacs-width 30))
 
 (map! :leader
-      :desc "Toggle Treemacs"           "t t" #'treemacs
-      :desc "Select Treemacs Window"    "t 1" #'treemacs-select-window)
+      :desc "Toggle treemacs"           "t t" #'treemacs
+      :desc "Select treemacs window"    "t 1" #'treemacs-select-window)
 #+end_src
