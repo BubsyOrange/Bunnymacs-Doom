@@ -73,7 +73,7 @@
   (kbd "k") 'peep-dired-prev-file)
 (add-hook 'peep-dired-hook 'evil-normalize-keymaps)
 
-(setq fancy-splash-image "~/.config/doom/img/Smug_Reisen.png")
+(setq fancy-splash-image "~/.config/doom/img/Reisen-Icon.png")
 
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)

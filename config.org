@@ -190,7 +190,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 
 * DOOM DASHBOARD
 #+begin_src emacs-lisp
-(setq fancy-splash-image "~/.config/doom/img/Smug_Reisen.png")
+(setq fancy-splash-image "~/.config/doom/img/Reisen-Icon.png")
 #+end_src
 
 * DOOM THEME
