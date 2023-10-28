@@ -197,7 +197,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 #+begin_src emacs-lisp
 (setq doom-theme 'catppuccin)
 (load-theme 'catppuccin t t)
-(setq catppuccin-flavor 'latte) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'frappe) ;; Available options are 'frappe, 'latte, 'macchiato or 'mocha
 (catppuccin-reload)
 #+end_src
 
