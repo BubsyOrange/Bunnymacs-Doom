@@ -7,13 +7,14 @@
        :desc "Delete bookmark"                         "M" #'bookmark-set
        :desc "Save current bookmarks to bookmark file" "w" #'bookmark-save))
 
-(setq centaur-tabs-set-bar 'left
+(after! centaur-tabs
+(setq centaur-tabs-set-bar 'right
       centaur-tabs-set-icons t
       centaur-tabs-gray-out-icons 'buffer
       centaur-tabs-height 24
       centaur-tabs-set-modified-marker t
       centaur-tabs-style "bar"
-      centaur-tabs-modified-marker "•")
+      centaur-tabs-modified-marker "•"))
 (map! :leader
       :desc "Toggle tabs globally" "t c" #'centaur-tabs-mode
       :desc "Toggle tabs local display" "t C" #'centaur-tabs-local-mode)
@@ -131,7 +132,7 @@
        :desc "Capture to node"     "n" #'org-roam-capture
        :desc "Toggle roam buffer"  "r" #'org-roam-buffer-toggle))
 
-(setq shell-file-name "/usr/bin/zsh"
+(setq shell-file-name "/usr/bin/bash"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"

@@ -59,13 +59,14 @@ Tabs for Emacs.
 | centaur-tabs-backward-group | /Previous tab group/        | g <up>           |
 
 #+begin_src emacs-lisp
-(setq centaur-tabs-set-bar 'left
+(after! centaur-tabs
+(setq centaur-tabs-set-bar 'right
       centaur-tabs-set-icons t
       centaur-tabs-gray-out-icons 'buffer
       centaur-tabs-height 24
       centaur-tabs-set-modified-marker t
       centaur-tabs-style "bar"
-      centaur-tabs-modified-marker "•")
+      centaur-tabs-modified-marker "•"))
 (map! :leader
       :desc "Toggle tabs globally" "t c" #'centaur-tabs-mode
       :desc "Toggle tabs local display" "t C" #'centaur-tabs-local-mode)
@@ -278,7 +279,7 @@ If peep-dired is enabled, you will get image previews as you go up/down with 'j'
 
 * SHELLS
 #+begin_src emacs-lisp
-(setq shell-file-name "/usr/bin/zsh"
+(setq shell-file-name "/usr/bin/bash"
       vterm-max-scrollback 5000)
 (setq eshell-rc-script "~/.config/doom/eshell/profile"
       eshell-aliases-file "~/.config/doom/eshell/aliases"
